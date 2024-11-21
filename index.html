@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Enrollment System</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js" defer></script>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="profile-icon" id="profile-icon">
+    <img src="profile-icon.png" alt="Profile Icon" width="40px" height="40px" />
+  </div>
+  <div class="form-container">
+    <h1>Enrollment Form</h1>
+    <form id="enrollment-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" required>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="birth-date">Birth Date</label>
+          <input type="date" id="birth-date" required>
+        </div>
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="radio-group">
+            <label for="male"><input type="radio" id="male" name="gender" value="Male"> Male</label>
+            <label for="female"><input type="radio" id="female" name="gender" value="Female"> Female</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" id="address" placeholder="Street Address" required>
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" placeholder="City" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="zip-code">Postal/Zip Code</label>
+          <input type="text" id="zip-code" placeholder="Postal/Zip Code" required>
+        </div>
+        <div class="form-group">
+          <label for="region">Region</label>
+          <input type="text" id="region" placeholder="Region" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="civil-status">Civil Status</label>
+          <input type="text" id="civil-status" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="religion">Religion</label>
+          <input type="text" id="religion" required>
+        </div>
+        <div class="form-group">
+          <label for="course">Course</label>
+          <select id="course" required>
+            <option value="college-computer-studies">College of Computer Studies</option>
+            <option value="college-criminology">College of Criminology</option>
+            <option value="college-business">College of Business Administration</option>
+            <option value="college-education">College of Education</option>
+            <option value="college-social-sciences">College of Social Sciences</option>
+            <option value="college-engineering">College of Engineering</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="admin-login hidden" id="admin-login">
+    <h2>Admin Login</h2>
+    <input type="email" id="admin-email" placeholder="Email" />
+    <input type="password" id="admin-password" placeholder="Password" />
+    <button id="login-btn">Login</button>
+    <p id="login-error" style="color: red; display: none;">Invalid credentials!</p>
+  </div>
+</body>
+</html>
