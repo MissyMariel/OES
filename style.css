@@ -1,132 +1,261 @@
 body, html {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #800000;
-  height: 100%;
-  overflow: hidden;
-}
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #800000;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .background {
+    background: url('school.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(5px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    box-sizing: border-box;
+    border: 2px solid #800000;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #800000;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    flex: 1 0 45%;
+    margin: 0 5px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input, select, button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background: #800000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background: #5a0000;
+  }
+  
+  .radio-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .radio-group label {
+    margin-right: 10px;
+  }
+  
+  .profile-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+  .admin-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  #success-modal {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  #success-modal.show {
+    display: block;
+    opacity: 1;
+  }
+  
+  .modal-content {
+    text-align: center;
+    padding: 20px;
+  }
 
-.background {
-  background: url('school.jpg') no-repeat center center fixed;
-  background-size: cover;
-  filter: blur(5px);
-  height: 100%;
-  position: absolute;
+
+
+
+  /* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Dashboard Container */
+.admin-dashboard {
   width: 100%;
-}
-
-.form-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.9);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 800px;
   box-sizing: border-box;
-  border: 2px solid #800000;
+  background: #fff;
+  border-radius: 8px;
+  margin: 30px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
   color: #800000;
-  font-size: 1.5em;
-  margin-bottom: 20px;
-}
-
-.form-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-.form-group {
-  flex: 1 0 45%;
-  margin: 0 5px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #333;
-}
-
-input, select, button {
-  width: 100%;
-  padding: 8px;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  box-sizing: border-box;
+  font-size: 2.2em;
+  margin-bottom: 30px;
 }
 
 button {
-  background: #800000;
+  padding: 10px 20px;
+  background-color: #800000;
   color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 14px;
-  padding: 10px;
-  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto 30px;
 }
 
 button:hover {
-  background: #5a0000;
+  background-color: #5a0000;
 }
 
-.radio-group {
-  display: flex;
-  align-items: center;
-}
-
-.radio-group label {
-  margin-right: 10px;
-}
-
-.profile-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
-
-.admin-login {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.9);
-  padding: 30px;
+/* Student Data Section */
+#student-data-container {
+  padding: 20px;
+  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 80%;
-  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#student-data-container h2 {
+  color: #800000;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Table Styles */
+#student-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
   box-sizing: border-box;
 }
 
-.hidden {
-  display: none !important;
+#student-data-table th, #student-data-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+  font-size: 14px;
 }
 
-#success-modal {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+#student-data-table th {
+  background-color: #800000;
+  color: white;
+  font-weight: bold;
 }
 
-#success-modal.show {
-  display: block;
-  opacity: 1;
+#student-data-table td {
+  background-color: #fafafa;
 }
 
-.modal-content {
-  text-align: center;
-  padding: 20px;
+#student-data-table tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
+
+#student-data-table tr:hover {
+  background-color: #e0e0e0;
+}
+
+/* Table Actions */
+#student-data-table .action-btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+#student-data-table .action-btns button {
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#student-data-table .action-btns .edit-btn {
+  background-color: #FFA500;
+  color: white;
+}
+
+#student-data-table .action-btns .delete-btn {
+  background-color: #FF0000;
+  color: white;
+}
+
+#student-data-table .action-btns button:hover {
+  opacity: 0.8;
+}
+
+
