@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
-// Firebase Configuration
+
 const firebaseConfig = {
   apiKey: "AIzaSyAHGQXISemOWSC60LEt4zWal8oCnAhXVfk",
   authDomain: "onlineenrollmentsystem-d33e0.firebaseapp.com",
@@ -11,11 +11,11 @@ const firebaseConfig = {
   appId: "1:669640475583:web:d81380f621bdc402e7970a"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// --- Admin Login ---
+
 document.getElementById('profile-icon').addEventListener('click', () => {
   const loginForm = document.getElementById('admin-login');
   loginForm.classList.toggle('hidden');
@@ -35,11 +35,11 @@ document.getElementById('login-btn').addEventListener('click', () => {
   }
 });
 
-// --- Enrollment Form Submission ---
+
 document.getElementById('enrollment-form').addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  // Get form data
+  
   const firstName = document.getElementById('first-name').value.trim();
   const lastName = document.getElementById('last-name').value.trim();
   const birthDate = document.getElementById('birth-date').value;
@@ -54,7 +54,7 @@ document.getElementById('enrollment-form').addEventListener('submit', async (e) 
   const religion = document.getElementById('religion').value.trim();
   const course = document.getElementById('course').value;
 
-  // Validate required fields
+
   if (!firstName || !lastName || !birthDate || !gender || !email || !course) {
     alert("Please fill in all required fields.");
     return;

@@ -134,7 +134,7 @@ body, html {
 
 
 
-  /* General Styles */
+  
 body, html {
     margin: 0;
     padding: 0;
@@ -146,7 +146,7 @@ body, html {
     flex-direction: column;
   }
   
-  /* Dashboard Container */
+
 .admin-dashboard {
   width: 100%;
   padding: 20px;
@@ -182,7 +182,7 @@ button:hover {
   background-color: #5a0000;
 }
 
-/* Student Data Section */
+
 #student-data-container {
   padding: 20px;
   background-color: #fff;
@@ -197,7 +197,7 @@ button:hover {
   text-align: center;
 }
 
-/* Table Styles */
+
 #student-data-table {
   width: 100%;
   border-collapse: collapse;
@@ -230,7 +230,7 @@ button:hover {
   background-color: #e0e0e0;
 }
 
-/* Table Actions */
+
 #student-data-table .action-btns {
   display: flex;
   justify-content: space-around;
